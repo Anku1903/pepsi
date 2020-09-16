@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function slide(any) {
+            document.querySelector('.pepsi').src = any;
+        }
+        function bg(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+        function navs() {
+            const menu = document.querySelector('.toggle');
+            const navigate = document.querySelector('.navi');
+            menu.classList.toggle('active');
+            navigate.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"> <img src="logo.png" class="logo">  </a>
+            <div class="toggle" onclick="navs()"> </div>
+            <ul class="navi">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2> That's why i like <br> <span>Pepsi</span> </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt suscipit odit magni, veniam quia, est labore voluptas accusamus iste nemo ab molestias quas soluta animi. Nostrum incidunt vero minima aliquam?</p>
+                <a href="#"> Buy Now</a>
+            </div>
+            <div class="imgbx">
+                <img src="p3.png" alt="" srcset="" class="pepsi">
+            </div>
+        </div>
+        <div class="thumb">
+            <ul>
+                <li><img src="p3.png" alt="" srcset="" onclick="slide('p3.png');bg('#0062be')"></li>
+                <li><img src="p2.png" alt="" srcset="" onclick="slide('p2.png');bg('#e60c2c')"></li>
+                <li><img src="p1.png" alt="" srcset="" onclick="slide('p1.png');bg('#1e1e1e')"></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

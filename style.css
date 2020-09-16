@@ -1,0 +1,209 @@
+*{
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sec{
+    position: relative;
+    width: 100%;
+    min-width: 100vh;
+    display: flex;
+    padding: 100px;
+    justify-content: space-between;
+    background: #0062be;
+    align-items: center;
+    transition: .5s;
+}
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    justify-content: space-between;
+    display: flex;
+    padding: 20px 100px;
+    width: 100%;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    min-width: 80px;
+}
+header ul{
+    position: relative;
+    display: flex;
+    list-style: none;
+}
+ ul li{
+    display: inline-block;
+    color: white;
+    margin-left: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+ul a{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.content .text{
+   position: relative;
+    max-width: 600px;
+    margin-top: 4px;
+}
+.content .text h2{
+    font-weight: 900;
+    font-size: 4em;
+    line-height: 1.5em;
+    color: white;
+
+}
+.content .text p{
+    font-size: 2em;
+    color: white;
+}
+.content .text a{
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 37px;
+    border-radius: 40px;
+    background: white;
+    color: #111;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.content .imgbx{
+    justify-content: flex-end;
+    padding-right: 50px;
+    display: flex;
+    margin-top: 50px;
+    width: 600px;
+}
+.content .imgbx img{
+    max-width: 260px;
+}
+.thumb{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    bottom: 20px;
+}
+.thumb li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+transition: .5s;
+}
+.thumb img{
+    max-width: 40px;
+}
+.thumb li:hover{
+    transform: translateY(-22px);
+    cursor: pointer;
+}
+@media (max-width:991px) {
+    section{
+        padding: 40px;
+        padding-bottom: 130px;
+    }
+    header{
+        padding: 20px 40px;
+    }
+    header .logo{
+        position: relative;
+        max-width: 60px;
+    }
+    header ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        z-index: 1;
+        transition: .2s;
+visibility: hidden;
+opacity: 0;
+    }
+    header ul li a{
+        display: inline-block;
+        margin-left: 0;
+        color: #111;
+        font-size: 2em;
+        font-weight: 400;
+        text-decoration: none;
+        margin: 10px 0;
+
+    }
+    header ul.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    header ul li a:hover{
+        color: #0062be;
+    }
+    .toggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background: url("nav.png");
+        background-size: 45px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 2;
+        filter: invert(1);
+    }
+    .toggle.active{
+        
+        background-position: center;
+        background: url("c2.png");
+        background-size: 50px;
+        background-repeat: no-repeat;
+    
+    }
+    .content{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .content .text{
+        position: relative;
+        max-width: 100%;
+        padding-right: 20px;
+    }
+    .content .text h2{
+        font-size: 3em;
+    }
+    .content .text a{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .content .imgbx{
+        width: 100%;
+        display: flex;
+        margin-top: 50px;
+        padding-right: 0;
+        justify-content: center;
+    }
+    .content .imgbx img{
+        max-width: 150px;
+    }
+    .thumb li img{
+        max-width: 30px;
+    }
+}
